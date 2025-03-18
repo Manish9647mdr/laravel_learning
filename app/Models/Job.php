@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -11,6 +12,8 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Job extends Model
 {
+    use HasFactory;
+
     // 使用するデータベースのテブール名を指定
     protected $table = 'job_listings';
 
