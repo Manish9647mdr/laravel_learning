@@ -19,4 +19,12 @@ class Job extends Model
 
     // 一括代入を許可するカラムを指定
     protected $fillable = ['title', 'salary'];
+
+    /**
+     * Employer モデルとリレーション
+     */
+    public function employer()
+    {
+        return $this->belongsTo(Employer::class);
+    }
 }
