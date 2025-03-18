@@ -17,8 +17,10 @@ class Job extends Model
     // 使用するデータベースのテブール名を指定
     protected $table = 'job_listings';
 
-    // 一括代入を許可するカラムを指定
-    protected $fillable = ['title', 'salary'];
+    // // 一括代入を許可するカラムを指定
+    // protected $fillable = ['employer_id', 'title', 'salary'];
+
+    protected $guarded = [];
 
     /**
      * Employer モデルとリレーション
