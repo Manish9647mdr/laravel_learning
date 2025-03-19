@@ -1,10 +1,15 @@
 <?php
 
 use App\Http\Controllers\JobController;
+use App\Http\Controllers\RegisteredUserController;
+use App\Http\Controllers\SessionController;
 use Illuminate\Support\Facades\Route;
 
 // Home route
 Route::view('/', 'home');
+
+// Contact route
+Route::view('/contact', 'contact');
 
 // Job routes
 Route::controller(JobController::class)->group(function () {
@@ -17,5 +22,9 @@ Route::controller(JobController::class)->group(function () {
     Route::delete('/jobs/{job}', 'destroy');
 });
 
-// Contact route
-Route::view('/contact', 'contact');
+// Auth
+Route::get('/register', [RegisteredUserController::class, 'create']);
+Route::post('/register', [RegisteredUserController::class, 'store']);
+
+Route::get('/login', [SessionController::class, 'create']);
+Route::post('/login', [SessionController::class, 'store']);
