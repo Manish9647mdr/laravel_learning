@@ -18,7 +18,7 @@
                     <x-form-field>
                         <x-form-label for="title">Title</x-form-label>
                         <div class="mt-2">
-                            <x-form-input nam="title" id="title" placeholder="Shift Leader" />
+                            <x-form-input name="title" id="title" placeholder="Shift Leader" />
                             <x-form-error name="title" />
                         </div>
                     </x-form-field>
